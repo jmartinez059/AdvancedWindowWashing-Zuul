@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    user-crud-service:
+      path: /**/user/**
+      service-id: user_crud_service
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_HOME}
+server:
+  port: 9090
